@@ -1,9 +1,22 @@
 from setuptools import setup, find_namespace_packages
 
+
+def _read(f) -> bytes:
+    """
+    Reads in the content of the file.
+    :param f: the file to read
+    :type f: str
+    :return: the content
+    :rtype: str
+    """
+    return open(f, 'rb').read()
+
 setup(
     name="wai.spectra",
     description="Python library for transmogrifying spectral data.",
-    long_description="Python library for weird transformations of spectra that have nowhere else to live.",
+    long_description=(
+        _read('DESCRIPTION.rst') + b'\n' +
+        _read('CHANGES.rst')).decode('utf-8'),
     url="https://github.com/waikato-datamining/py-spectral-transmogrifier",
     classifiers=[
         'Development Status :: 4 - Beta',

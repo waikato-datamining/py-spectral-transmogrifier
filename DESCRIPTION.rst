@@ -1,0 +1,1 @@
+Python library for weird transformations of spectra that have nowhere else to live.

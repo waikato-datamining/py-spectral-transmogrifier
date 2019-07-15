@@ -1,0 +1,7 @@
+# taken from here:
+# https://caremad.io/posts/2013/07/setup-vs-requirement/
+-e .
+numpy>=1.16.3
+pyAudioAnalysis>=0.2.5
+pypng>=0.0.19
+wai.keras>=0.0.1
